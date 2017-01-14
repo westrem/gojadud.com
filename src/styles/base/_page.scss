@@ -1,0 +1,131 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  font-family: $font-main;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 20 * $bu;
+  height: 100%;
+  min-height: 444px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  @media screen and (max-width: 20 * $bu) {
+    padding-left: 1.5 * $bu;
+    padding-right: 1.5 * $bu;
+    display: block;
+  }
+
+  @media screen and (max-height: 444px) {
+    display: block;
+  }
+
+}
+
+.avatar-wrapper {
+  padding-top: 1.5 * $bu;
+  height: 75px;
+  line-height: 1;
+}
+
+.avatar {
+  border-radius: 6px;
+}
+
+.about-wrapper {
+  margin: 1.2 * $bu 0 0 0;
+}
+
+.about {
+  margin: 0;
+
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: normal;
+  color: $c-black;
+  line-height: 0.9 * $bu;
+
+  text-align: center;
+
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+    line-height: 0.7 * $bu;
+  }
+}
+
+.links-wrapper {
+  margin: $bu 0 0 0;
+  padding-bottom: 1.5 * $bu;
+
+  @media screen and (max-height: 450px) {
+    margin-bottom: 0;
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.link-item {
+  padding: $bu / 6 $bu / 2;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  //border-bottom: 0.8px transparent solid;
+
+  font-family: $font-alt;
+  font-weight: normal !important;
+  font-size: 21px;
+  color: $c-red;
+
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 97%;
+    height: 1px;
+    position: absolute;
+    left: 1.5%;
+    bottom: 3px;
+    opacity: 0;
+
+    background-color: $c-red;
+
+    transition: opacity 0.6s ease-out;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+
+    //border-bottom: 0.8px $red solid;
+  }
+}
+
