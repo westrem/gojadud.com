@@ -34,11 +34,7 @@ const PATHS = {
     },
     DEPLOY: {
       src: appPathDist + '**/*.*',
-      dest: deployPath
-    },
-    SYMLINK: {
-      from: sourcePath,
-      to: linkPath,
+      dest: sourcePath
     }
   }
 };
