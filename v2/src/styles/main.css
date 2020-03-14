@@ -1,0 +1,1053 @@
+/*
+ * Variables
+ */
+/*
+ * Breakpoints
+ */
+/*
+ * Special content breakpoints
+ */
+html {
+  color: #313131;
+  font-size: 62.5%;
+  line-height: 1;
+  font-family: "Vesper Libre", serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #FFE066;
+  text-shadow: none;
+}
+
+::selection {
+  background: #FFE066;
+  text-shadow: none;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+.wrapper {
+  position: relative;
+  max-width: 1440px;
+}
+
+@media (max-width: 1199px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 30px 15px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    display: block;
+    width: 54px;
+    position: fixed;
+    left: 40px;
+    top: 30px;
+  }
+}
+header .logo {
+  text-decoration: none;
+  display: block;
+}
+header .logo img {
+  transition: all 0.2s ease;
+  width: 54px;
+}
+header .logo:hover img {
+  opacity: 0.9;
+}
+@media (min-width: 1200px) {
+  header address {
+    display: none;
+  }
+}
+
+address {
+  display: block;
+  font-style: normal;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+address a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  color: #2D9EE0;
+}
+address a::before {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0px;
+  bottom: 6px;
+  background-color: transparent;
+}
+address a:hover {
+  color: #5bb3e7;
+}
+address a:hover::before {
+  background-color: #5bb3e7;
+}
+address a:active {
+  color: #1c83bf;
+}
+address a:active::before {
+  background-color: #1c83bf;
+}
+
+main {
+  padding: 0px;
+  margin: 0px auto 0px auto;
+  max-width: 640px;
+}
+@media (max-width: 1199px) {
+  main {
+    padding-bottom: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    padding: 68px 0px 48px 0px;
+  }
+}
+
+blockquote {
+  display: block;
+  color: #ffffff;
+  font-family: "Vesper Libre", serif;
+  margin: 30px 0px 20px 0px;
+  padding: 16px 15px 12px 15px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  background: #2D9EE0;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #5BB3E7 0%, #2D9EE0 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #5BB3E7 0%, #2D9EE0 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #5BB3E7 0%, #2D9EE0 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#5BB3E7", endColorstr="#2D9EE0",GradientType=1 );
+  /* IE6-9 */
+}
+@media (min-width: 641px) {
+  blockquote {
+    border-radius: 6px;
+    margin: 40px 0px 28px 0px;
+    padding: 16px 20px 12px 20px;
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+}
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+blockquote a::before, blockquote a:hover::before, blockquote a:active::before, blockquote a:visited::before {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0px;
+  bottom: 6px;
+  background-color: #ffffff;
+}
+@media (min-width: 641px) {
+  blockquote a::before, blockquote a:hover::before, blockquote a:active::before, blockquote a:visited::before {
+    bottom: 8px;
+  }
+}
+blockquote a:hover::before {
+  background-color: transparent;
+}
+
+article {
+  position: relative;
+}
+
+main > article > p {
+  font-family: "Vesper Libre", serif;
+  margin: 0px 15px 0px 15px;
+  padding: 10px 0px 0px 0px;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 641px) {
+  main > article > p {
+    margin: 0px 20px 0px 20px;
+    padding: 20px 0px 0px 0px;
+    font-size: 1.8rem;
+    line-height: 3.3rem;
+  }
+}
+
+article > .highlights {
+  padding: 20px 15px 0px 15px;
+}
+@media (min-width: 1200px) {
+  article > .highlights {
+    column-count: 2;
+    column-gap: 20px;
+    padding: 20px 20px 0px 20px;
+  }
+}
+article > .highlights article {
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+article > .highlights article h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin: 0px 0px 10px 0px;
+}
+@media (min-width: 1200px) {
+  article > .highlights article h4 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+article > .highlights article p {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Vesper Libre", serif;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+@media (min-width: 1200px) {
+  article > .highlights article p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+article > .lists {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 20px 15px 0px 15px;
+}
+@media (min-width: 641px) {
+  article > .lists {
+    column-count: 4;
+  }
+}
+@media (min-width: 1200px) {
+  article > .lists {
+    column-gap: 20px;
+    padding: 20px 20px 0px 20px;
+  }
+}
+article > .lists ul {
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+  break-inside: avoid;
+  list-style: none;
+}
+article > .lists li {
+  margin: 0px;
+  padding: 0px;
+}
+article > .lists li a {
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #2D9EE0;
+  text-decoration: none;
+}
+@media (min-width: 1200px) {
+  article > .lists li a {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+article > .lists li a::before {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  background-color: transparent;
+}
+@media (min-width: 1200px) {
+  article > .lists li a::before {
+    bottom: 6px;
+  }
+}
+article > .lists li a:hover {
+  color: #5bb3e7;
+}
+article > .lists li a:hover::before {
+  background-color: #5bb3e7;
+}
+article > .lists li a:active {
+  color: #1c83bf;
+}
+article > .lists li a:active::before {
+  background-color: #1c83bf;
+}
+article > .lists li a:visited {
+  color: #a07e9c;
+}
+article > .lists li a:visited:hover::before {
+  background-color: #a07e9c;
+}
+
+article > aside {
+  display: block;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  article > aside {
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  article > aside {
+    position: absolute;
+    width: 200px;
+    top: -38px;
+    right: -240px;
+  }
+}
+@media (min-width: 1440px) {
+  article > aside {
+    right: -380px;
+  }
+}
+article > aside::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  right: 0px;
+  top: 49%;
+  z-index: 10;
+  opacity: 0.8;
+  background: #313131;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #313131 0%, transparent 20%, transparent 80%, #313131 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #313131 0%, transparent 20%, transparent 80%, #313131 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #313131 0%, transparent 20%, transparent 80%, #313131 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#313131",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside::before {
+    width: 1052px;
+    top: 38px;
+    opacity: 0.5;
+    background: #313131;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #313131 82%, #313131 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #313131 82%, #313131 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #313131 82%, #313131 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#313131",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+@media (max-width: 1199px) {
+  article > aside img {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  article > aside img, article > aside > div {
+    position: relative;
+    z-index: 20;
+    margin: 0px auto;
+    padding: 1px;
+    border-radius: 50%;
+    border: 2px solid #313131;
+    background-color: #fff;
+    max-width: 74px;
+  }
+}
+article > aside > div {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+}
+@media (max-width: 1199px) {
+  article > aside > div {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  article > aside > div {
+    width: 74px;
+    height: 74px;
+    line-height: 74px;
+  }
+}
+article > aside h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  margin: 0px 0px 6px 0px;
+  padding: 0px 4px;
+  background-color: #ffffff;
+  z-index: 20;
+}
+@media (min-width: 1200px) {
+  article > aside h2 {
+    margin-top: 12px;
+  }
+}
+article > aside i {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 1.4rem;
+  padding: 0px 4px;
+  background-color: #ffffff;
+  z-index: 20;
+}
+article > aside.color--disabled::before {
+  background: #808080;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #808080 0%, transparent 20%, transparent 80%, #808080 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #808080 0%, transparent 20%, transparent 80%, #808080 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #808080 0%, transparent 20%, transparent 80%, #808080 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#808080",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--disabled::before {
+    background: #808080;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #808080 82%, #808080 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #808080 82%, #808080 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #808080 82%, #808080 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#808080",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--disabled img, article > aside.color--disabled > div {
+  border-color: #808080;
+}
+article > aside.color--bubble::before {
+  background: #7EBEEB;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #7EBEEB 0%, transparent 20%, transparent 80%, #7EBEEB 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #7EBEEB 0%, transparent 20%, transparent 80%, #7EBEEB 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #7EBEEB 0%, transparent 20%, transparent 80%, #7EBEEB 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#7EBEEB",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--bubble::before {
+    background: #7EBEEB;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #7EBEEB 82%, #7EBEEB 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #7EBEEB 82%, #7EBEEB 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #7EBEEB 82%, #7EBEEB 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#7EBEEB",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--bubble img, article > aside.color--bubble > div {
+  border-color: #7EBEEB;
+}
+article > aside.color--melon::before {
+  background: #B22624;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #B22624 0%, transparent 20%, transparent 80%, #B22624 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #B22624 0%, transparent 20%, transparent 80%, #B22624 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #B22624 0%, transparent 20%, transparent 80%, #B22624 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#B22624",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--melon::before {
+    background: #B22624;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #B22624 82%, #B22624 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #B22624 82%, #B22624 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #B22624 82%, #B22624 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#B22624",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--melon img, article > aside.color--melon > div {
+  border-color: #B22624;
+}
+article > aside.color--warning::before {
+  background: #FFCB00;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #FFCB00 0%, transparent 20%, transparent 80%, #FFCB00 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #FFCB00 0%, transparent 20%, transparent 80%, #FFCB00 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #FFCB00 0%, transparent 20%, transparent 80%, #FFCB00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#FFCB00",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--warning::before {
+    background: #FFCB00;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #FFCB00 82%, #FFCB00 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #FFCB00 82%, #FFCB00 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #FFCB00 82%, #FFCB00 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#FFCB00",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--warning img, article > aside.color--warning > div {
+  border-color: #FFCB00;
+}
+article > aside.color--primary::before {
+  background: #2D9EE0;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #2D9EE0 0%, transparent 20%, transparent 80%, #2D9EE0 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #2D9EE0 0%, transparent 20%, transparent 80%, #2D9EE0 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #2D9EE0 0%, transparent 20%, transparent 80%, #2D9EE0 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#2D9EE0",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--primary::before {
+    background: #2D9EE0;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #2D9EE0 82%, #2D9EE0 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #2D9EE0 82%, #2D9EE0 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #2D9EE0 82%, #2D9EE0 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#2D9EE0",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--primary img, article > aside.color--primary > div {
+  border-color: #2D9EE0;
+}
+article > aside.color--danger::before {
+  background: #FF6150;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #FF6150 0%, transparent 20%, transparent 80%, #FF6150 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #FF6150 0%, transparent 20%, transparent 80%, #FF6150 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #FF6150 0%, transparent 20%, transparent 80%, #FF6150 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#FF6150",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--danger::before {
+    background: #FF6150;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #FF6150 82%, #FF6150 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #FF6150 82%, #FF6150 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #FF6150 82%, #FF6150 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#FF6150",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--danger img, article > aside.color--danger > div {
+  border-color: #FF6150;
+}
+article > aside.color--extra::before {
+  background: #DA6BEB;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #DA6BEB 0%, transparent 20%, transparent 80%, #DA6BEB 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #DA6BEB 0%, transparent 20%, transparent 80%, #DA6BEB 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #DA6BEB 0%, transparent 20%, transparent 80%, #DA6BEB 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#DA6BEB",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (min-width: 1200px) {
+  article > aside.color--extra::before {
+    background: #DA6BEB;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #DA6BEB 82%, #DA6BEB 95%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #DA6BEB 82%, #DA6BEB 95%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #DA6BEB 82%, #DA6BEB 95%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#DA6BEB",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+  }
+}
+article > aside.color--extra img, article > aside.color--extra > div {
+  border-color: #DA6BEB;
+}
+
+.navigation {
+  position: fixed;
+  left: 0px;
+}
+@media (max-width: 1199px) {
+  .navigation {
+    bottom: 0px;
+    width: 100%;
+    background-color: #F8F8FA;
+    z-index: 900;
+  }
+  .navigation address {
+    display: none;
+  }
+  .navigation::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+@media (min-width: 1200px) {
+  .navigation {
+    top: 108px;
+  }
+}
+.navigation nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .navigation nav ul {
+    width: 100%;
+    display: flex;
+  }
+}
+.navigation nav ul li {
+  display: block;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .navigation nav ul li {
+    text-align: center;
+    padding: 10px 0px;
+    width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li::before {
+    transition: all 0.4s ease;
+    content: "";
+    display: block;
+    width: 7px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    background-color: transparent;
+  }
+  .navigation nav ul li:hover::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    background-color: #FFE066;
+  }
+}
+.navigation nav ul li a {
+  transition: all 0.4s ease;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #313131;
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li a {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    padding-left: 40px;
+  }
+  .navigation nav ul li a::before {
+    transition: all 0.4s ease;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+  }
+  .navigation nav ul li a:hover {
+    padding-left: 35px;
+  }
+  .navigation nav ul li a:hover::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    border-radius: 50%;
+    border: 2px solid #FFE066;
+  }
+}
+.navigation nav ul li a:visited {
+  color: #a07e9c;
+}
+.navigation nav ul li a span {
+  display: block;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li a span {
+    display: none;
+  }
+}
+.navigation nav ul li.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  background-color: #FFCB00;
+}
+@media (max-width: 1199px) {
+  .navigation nav ul li.active::before {
+    width: 100%;
+    height: 3px;
+    top: -3px;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li.active::before {
+    width: 16px;
+    height: 2px;
+    top: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li.active a {
+    font-weight: 700;
+    cursor: not-allowed;
+  }
+  .navigation nav ul li.active a::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    border-radius: 50%;
+    border: 2px solid #FFCB00;
+  }
+  .navigation nav ul li.active a:hover {
+    padding-left: 40px;
+  }
+}
+.navigation nav ul li.disabled::before {
+  background-color: transparent;
+}
+.navigation nav ul li.disabled a {
+  color: #808080;
+  cursor: not-allowed;
+}
+@media (min-width: 1200px) {
+  .navigation nav ul li.disabled a:hover {
+    padding-left: 40px;
+  }
+  .navigation nav ul li.disabled a:hover::before {
+    border-color: transparent;
+  }
+}
+.navigation address {
+  margin: 16px 0px 0px 30px;
+  padding: 16px 10px 0px 10px;
+  border-top: 1px solid #FF6150;
+}
+
+.name-photo {
+  width: 120px;
+}
+@media (max-width: 1199px) {
+  .name-photo {
+    margin: 0px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .name-photo {
+    position: absolute;
+    right: 80px;
+    top: 68px;
+  }
+  .name-photo::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 68px;
+    position: absolute;
+    right: 60px;
+    top: -68px;
+    background-color: #FFCB00;
+  }
+}
+.name-photo img {
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid #FFCB00;
+  background-color: #fff;
+  max-width: 112px;
+}
+.name-photo h1 {
+  width: 160px;
+  height: 30px;
+  position: relative;
+  left: -20px;
+  margin-top: 12px;
+  color: transparent;
+  background: transparent url("../images/name@2x.png?v={*version*}") 50% 50% no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1199px) {
+  .page-experience main > blockquote, .page-skills main > blockquote {
+    margin-bottom: 10px;
+  }
+  .page-experience main > article, .page-skills main > article {
+    padding: 30px 0px 20px 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-experience main > blockquote, .page-skills main > blockquote {
+    margin-bottom: 48px;
+  }
+  .page-experience main > article, .page-skills main > article {
+    padding: 20px 0px 88px 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-skills main {
+    padding-top: 108px;
+  }
+}
+
+@media (max-width: 599px) {
+  .page-experience main > blockquote {
+    position: relative;
+  }
+  .page-experience main > blockquote i {
+    display: none;
+  }
+  .page-experience main > blockquote span {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    height: 100%;
+    line-height: 92px;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 600px) {
+  .page-experience main > blockquote br {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+blockquote, main > article {
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img, article > .highlights, article > .lists {
+    page-break-inside: avoid;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1, h2, h3, article > aside {
+    page-break-after: avoid;
+  }
+
+  article > .highlights, article > .lists {
+    page-break-before: avoid;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  article > .highlights {
+    column-count: 2;
+    column-gap: 20px;
+    padding: 20px 20px 0px 20px;
+  }
+
+  .name-photo h1 {
+    text-align: center;
+    width: auto;
+    left: 0px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
