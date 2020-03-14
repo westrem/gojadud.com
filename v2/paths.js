@@ -1,7 +1,7 @@
 const appPath = './';
 const appPathSrc = appPath + 'src/';
 const appPathDist = appPath + 'dist/';
-const deployPath = appPath + '../builds/';
+const deployPath = appPath + '../../builds/';
 
 /*
  * Websupport specifics
@@ -34,7 +34,7 @@ const PATHS = {
     },
     DEPLOY: {
       src: appPathDist + '**/*.*',
-      dest: sourcePath
+      dest: deployPath
     }
   }
 };
