@@ -27,7 +27,7 @@
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp clean && gulp build",
-    "deploy": "gulp clean && gulp build && gulp deploy",
+    "deploy": "gulp clean && gulp build && ./deploy.sh",
     "serve": "node ./node_modules/http-server/bin/http-server ./dist -p 3000 -o -c-1",
     "start": "gulp clean && gulp build && npm-run-all --parallel watch serve"
   }

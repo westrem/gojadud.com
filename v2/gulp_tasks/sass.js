@@ -9,7 +9,7 @@ import VERSION from './../version';
 function processSass() {
   console.log('running: Sass');
   return gulp.src(PATHS.APP.SASS.entry)
-    .pipe(replace('{*version*}', VERSION))
+    // .pipe(replace('{*version*}', VERSION))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 2 versions'],
