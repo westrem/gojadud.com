@@ -1,10 +1,13 @@
 import gulp from 'gulp';
-import sass from 'gulp-sass';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import replace from 'gulp-replace';
 import autoprefixer from 'gulp-autoprefixer';
 
 import PATHS from './../paths';
 import VERSION from './../version';
+
+const sass = gulpSass(dartSass);
 
 function processSass() {
   console.log('running: Sass');
