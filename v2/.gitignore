@@ -1,3 +1,17 @@
 dist/*
 node_modules
 doc/*
+/src/images/examples/preview_primer_dashboard_connections_management.png
+/src/images/examples/preview_primer_dashboard_settings_developers.png
+/src/images/examples/preview_primer_dashboard_snapshot_payments.png
+/src/images/examples/preview_primer_design_system.png
+/src/images/examples/primer_dashboard_1.png
+/src/images/examples/primer_dashboard_2.png
+/src/images/examples/primer_dashboard_3.png
+/src/images/examples/primer_dashboard_4.png
+/src/images/examples/primer_dashboard_5.png
+/src/images/examples/primer_dashboard_6.png
+/src/images/examples/primer_dashboard_7.png
+/src/images/examples/primer_dashboard_8.png
+/src/images/examples/primer_dashboard_9.png
+/src/images/examples/primer_dashboard_10.png
